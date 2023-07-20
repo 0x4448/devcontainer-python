@@ -1,8 +1,9 @@
 {
-    "name": "0x4448/devcontainer-python",
-    "build": {
-        "dockerfile": "Dockerfile"
+	"name": "0x4448/devcontainer-python",
+	"build": {
+		"dockerfile": "Dockerfile"
 	},
+	"postAttachCommand": "pre-commit install --install-hooks",
 	"customizations": {
 		"vscode": {
 			"extensions": [
