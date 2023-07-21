@@ -7,4 +7,5 @@ RUN apt update && apt install -y \
     && rm -rf /var/lib/apt/lists/*
 
 RUN pipx install isort && \
+    pipx install pip-tools && \
     pipx install pre-commit
