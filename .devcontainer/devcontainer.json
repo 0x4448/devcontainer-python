@@ -3,7 +3,10 @@
     "build": {
         "dockerfile": "Dockerfile"
     },
-    "postAttachCommand": "pre-commit install --install-hooks",
+    "postCreateCommand": {
+        "set-safe-directory": "sudo git config --system --add safe.directory ${containerWorkspaceFolder}",
+        "install-pre-commit-hooks": "pre-commit install --install-hooks"
+    },
     "customizations": {
         "vscode": {
             "extensions": [
